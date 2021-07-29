@@ -1,16 +1,15 @@
 ---
 layout: post
-title:  Trip to Himachal
+title:  Trip to Singapore
 date:   2021-07-27 22:43:49 +0530
 categories: jekyll update
 carousel: true
-index: 1
+index: 3
 banners: 
-  - "/assets/images/trips/himachal-banner1.jpg"
-  - "/assets/images/trips/himachal-banner2.jpg"
-  - "/assets/images/trips/himachal-banner3.jpg"
+  - "/assets/images/trips/singapore-banner1.jpg"
+  - "/assets/images/trips/singapore-banner2.jpg"
+  - "/assets/images/trips/singapore-banner3.jpg"
 ---
-
 You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run `jekyll serve`, which launches a web server and auto-regenerates your site when a file is updated.
 
 Jekyll requires blog post files to be named according to the following format:

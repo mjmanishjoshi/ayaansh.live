@@ -1,24 +1,31 @@
 <div id="myCarousel" class="carousel slide mb-4" data-bs-ride="carousel">
+    {% assign posts = site.posts | where: 'carousel', true | sort: "index" %}
     <div class="carousel-indicators">
-        {% for post in site.posts %}
-        <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="{{forloop.index0}}" 
-            {% if forloop.first %}
-            class="active" aria-current="true" 
-            {% endif %}
-            ></button>
+        {% for post in posts %}
+        <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="{{forloop.index0}}" {% if forloop.first %}
+            class="active" aria-current="true" {% endif %}></button>
         {% endfor %}
     </div>
     <div class="carousel-inner">
-        {% for post in site.posts %}
+        {% for post in posts %}
         {% if forloop.first %}
-        <div class="carousel-item">
-        {% else %}
         <div class="carousel-item active">
+        {% else %}
+        <div class="carousel-item">
         {% endif %}
-            <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg"
-                aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false">
-                <rect width="100%" height="100%" fill="#777" />
-            </svg>
+            <div>
+                {% for banner in post.banners %}
+                <img class="cycle" src="{{banner}}"
+                {% if forloop.first %}
+                style="animation-delay: -2s;"
+                {% elsif forloop.last %}
+                style="animation-delay: 0s;"
+                {% else %}
+                style="animation-delay: -4s;"
+                {% endif %}
+                />
+                {% endfor %}
+            </div>
 
             <div class="container">
                 {% if forloop.first %}

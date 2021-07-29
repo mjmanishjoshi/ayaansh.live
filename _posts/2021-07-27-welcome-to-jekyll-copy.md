@@ -1,8 +1,14 @@
 ---
 layout: post
-title:  "Welcome to Jekyll!"
+title:  Trip to Paris
 date:   2021-07-27 22:43:49 +0530
 categories: jekyll update
+carousel: true
+index: 2
+banners: 
+  - "/assets/images/trips/paris-banner1.jpg"
+  - "/assets/images/trips/paris-banner2.jpg"
+  - "/assets/images/trips/paris-banner3.jpg"
 ---
 You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run `jekyll serve`, which launches a web server and auto-regenerates your site when a file is updated.
 
